@@ -1,7 +1,7 @@
 /**********************
  Simulador.java
- Autor: Daniel Cabrera 20289, Jorge Perez
- Última modificación: 2021-11-01
+ Autor: Daniel Cabrera 20289, Jorge Perez 18364
+ Última modificación: 2021-01-21
  **********************/
 
 import java.util.Scanner;
@@ -52,9 +52,9 @@ public class Driver{
                 int resp = scan.nextInt();
                 int respuesta = resp - 1;
                 if (radio.getFrecuencia() == false) {
-                    radio.setFavAM(respuesta, EstacionActual);
+                    radio.setFavAM(respuesta, emisoras.round(EstacionActual, 2));
                 } else if(radio.getFrecuencia() == true){
-                    radio.setFavFM(respuesta, EstacionActual);
+                    radio.setFavFM(respuesta, emisoras.round(EstacionActual, 2));
                 }
             }else if(eleccion == 6){ //Seleccion de la opcion 6, muestra las estaciones guardadas dependiendo de la emisora en la que se encuentre el usuario, ya sea en AM o FM.
                 vista.Favoritas(radio.getFavAM(), radio.getFavFM(), radio.getFrecuencia());
