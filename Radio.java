@@ -1,6 +1,6 @@
 public class Radio{
     boolean Estado = false;
-    boolean Estacion = false;
+    boolean Estacion = true;
     Double estacionActual = 94.9;
 
     Double[] FavoritosAM = {0.0, 0.0, 0.0, 0.0, 0.0, 0.0};
